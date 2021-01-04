@@ -184,6 +184,8 @@ display: none;
 	        createjs.Sound.registerSound({ src: "img/combobreak.wav", id: "err" });
 	        createjs.Sound.registerSound({ src: "img/end.mp3", id: "end" });
 	        createjs.Sound.registerSound({ src: "img/keqing.mp3", id: "tap" });
+		createjs.Sound.registerSound({ src: "img/pause-loop.mp3", id: "died"});
+
 	        gameRestart();
 	    }
 	    function gameRestart() {
@@ -347,6 +349,7 @@ display: none;
 	        document.getElementById('GameScoreLayer-bast').innerHTML = '最佳&nbsp;&nbsp;' + bast;
 	        l.style.display = 'block';
 	        window.shareData.tTitle = '才打了' + _gameScore + '个音符，我太菜了！！！'
+	
 	    }
 	    function hideGameScoreLayer() {
 	        var l = document.getElementById('GameScoreLayer');
@@ -369,6 +372,7 @@ display: none;
 		cookie('score2', score, 100);
 			
 	        if (score <= 1000)
+		    createjs.Sound.play("died");
 	            return '才打了'+score+'个音符，你太菜了!';
 	    }
 	    function shareText1(score) {
