@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>你是我的小苹果 太好玩了</title>
+<title>别踩白块儿改版</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi" />
 <script type="text/javascript" src="scripts/createjs.js"></script>
@@ -110,7 +110,7 @@ display: none;
 	            GameLayerBG.ontouchstart = gameTapEvent;
 	        } else {
 	            GameLayerBG.onmousedown = gameTapEvent;
-	            document.getElementById('landscape-text').innerHTML = '点我开始玩耍';
+	            document.getElementById('landscape-text').innerHTML = '点我开始';
 	            document.getElementById('landscape').onclick = winOpen;
 	        }
 	        gameInit();
@@ -122,7 +122,7 @@ display: none;
 			if(rtnMsg == 'false'){
 				var btn = document.getElementById('ready-btn');
 				btn.className = 'btn';
-				btn.innerHTML = '您今天已经吃太多苹果啦，请明天继续！' 			
+				btn.innerHTML = '呵呵呵呵！' 			
 			}else{
 				var btn = document.getElementById('ready-btn');
 				btn.className = 'btn';
@@ -373,7 +373,7 @@ display: none;
 	    }
 	    function shareText1(score) {
 			
-	        return '你是我的小苹果 太好玩了！看看你能吃到多少个吧!';
+	        return '来打架，看看你能按多少个';
 	    }
 	    function toStr(obj) {
 	        if (typeof obj == 'object') {
