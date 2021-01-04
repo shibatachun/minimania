@@ -184,7 +184,8 @@ display: none;
 	        createjs.Sound.registerSound({ src: "img/combobreak.wav", id: "err" });
 	        createjs.Sound.registerSound({ src: "img/end.mp3", id: "end" });
 	        createjs.Sound.registerSound({ src: "img/keqing.mp3", id: "tap" });
-		createjs.Sound.registerSound({ src: "img/pause-loop.mp3", id: "died"});
+		    createjs.Sound.registerSound({ src: "img/pause-loop.mp3", id: "died"});
+		    createjs.Sound.registerSound({ src: "img/replay.mp3", id:"replay"});
 
 	        gameRestart();
 	    }
@@ -358,6 +359,8 @@ display: none;
 	    function replayBtn() {
 	        gameRestart();
 	        hideGameScoreLayer();
+	        createjs.Sound.stop();
+	        createjs.Sound.play("replay");
 			
 	    }
 	    function backBtn() {
